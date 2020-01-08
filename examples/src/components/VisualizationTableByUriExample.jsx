@@ -12,6 +12,8 @@ export class VisualizationTable extends Component {
                 <Visualization
                     projectId={projectId}
                     uri={tableVisualizationUri}
+					groupRows='true'
+						pageSize={20}
                 />
             </div>
         );

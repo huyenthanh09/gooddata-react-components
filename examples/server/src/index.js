@@ -15,7 +15,7 @@ const config = {
     serveFrom: `${__dirname}/../../dist/`,
     port: process.env.PORT || 3009,
     https: process.env.HTTPS || false,
-    domain: process.env.DOMAIN || 'https://developer.na.gooddata.com/',
+    domain: process.env.DOMAIN || 'https://staging3.intgdc.com/',
     domainAdmin: {
         username: process.env.DOMAIN_ADMIN_USERNAME,
         password: process.env.DOMAIN_ADMIN_PASSWORD

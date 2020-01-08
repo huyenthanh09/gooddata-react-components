@@ -50,6 +50,7 @@ export class HeadlineExample extends Component {
                         secondaryMeasure={secondaryMeasure}
                         onLoadingChanged={this.onLoadingChanged}
                         onError={this.onError}
+						locale = "ja-JP"
                     />
                 </div>
             </div>

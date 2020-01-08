@@ -12,6 +12,7 @@ export class VisualizationTable extends Component {
                 <Visualization
                     projectId={projectId}
                     uri={barVisualizationUri}
+					locale = "ja-JP"
                 />
             </div>
         );

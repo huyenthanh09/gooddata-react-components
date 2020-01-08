@@ -73,7 +73,8 @@ export class PivotTableTotalsExample extends Component {
                 <PivotTable
                     config={{
                         menu: {
-                            aggregations: true
+                            aggregations: true,
+							aggregationsSubMenu: true,
                         }
                     }}
                     projectId={projectId}
@@ -82,6 +83,7 @@ export class PivotTableTotalsExample extends Component {
                     columns={columns}
                     pageSize={20}
                     totals={totals}
+					locale = "ja-JP"
                 />
             </div>
         );

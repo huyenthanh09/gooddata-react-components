@@ -33,6 +33,7 @@ export class ColumnChartExample extends Component {
                     viewBy={month}
                     onLoadingChanged={this.onLoadingChanged}
                     onError={this.onError}
+					locale = "ja-JP"
                 />
             </div>
         );

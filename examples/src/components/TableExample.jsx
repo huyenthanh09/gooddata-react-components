@@ -43,22 +43,32 @@ export class TableExample extends Component {
         const totals = [
             {
                 measureIdentifier: 'franchiseFeesIdentifier',
-                type: 'avg',
+                type: 'sum',
                 attributeIdentifier: 'month'
             },
             {
                 measureIdentifier: 'franchiseFeesAdRoyaltyIdentifier',
-                type: 'avg',
+                type: 'max',
                 attributeIdentifier: 'month'
             },
             {
                 measureIdentifier: 'franchiseFeesInitialFranchiseFeeIdentifier',
-                type: 'avg',
+                type: 'min',
                 attributeIdentifier: 'month'
             },
             {
                 measureIdentifier: 'franchiseFeesIdentifierOngoingRoyalty',
                 type: 'avg',
+                attributeIdentifier: 'month'
+            },
+            {
+                measureIdentifier: 'franchiseFeesAdRoyaltyIdentifier',
+                type: 'med',
+                attributeIdentifier: 'month'
+            },
+            {
+                measureIdentifier: 'franchiseFeesInitialFranchiseFeeIdentifier',
+                type: 'nat',
                 attributeIdentifier: 'month'
             }
         ];
@@ -76,6 +86,7 @@ export class TableExample extends Component {
                     totals={totals}
                     onLoadingChanged={this.onLoadingChanged}
                     onError={this.onError}
+					locale = "ja-JP"
                 />
             </div>
         );

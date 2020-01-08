@@ -152,7 +152,7 @@
     "examples-testcafe": "testcafe chrome --assertion-timeout 60000 -S -s examples/_screenshots examples/test/**/**/*_test* --debug-on-fail",
     "examples-testcafe-live": "testcafe-live chrome --assertion-timeout 60000 examples/test/**/**/*_test*",
     "examples-testcafe-ci": "testcafe 'chrome:headless --no-sandbox' --assertion-timeout 60000 -S -s examples/_screenshots examples/test/**/**/*_test*",
-    "heroku-postbuild": "yarn examples-build developer"
+    "heroku-postbuild": "yarn examples-build stg3"
   },
   "typings": "dist/index.d.ts",
   "jest": {

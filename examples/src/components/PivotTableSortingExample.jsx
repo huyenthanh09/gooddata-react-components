@@ -54,6 +54,7 @@ export class PivotTableSortingExample extends Component {
                     columns={columns}
                     pageSize={20}
                     sortBy={sortBy}
+					groupRows='true'
                 />
             </div>
         );

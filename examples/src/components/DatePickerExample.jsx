@@ -122,11 +122,11 @@ export class DatePickerExample extends Component {
                 `}</style>
                 <label className="s-date-picker-from">
                     <h4>From</h4>
-                    <DatePicker className="gd-input-field" selected={from} onChange={this.onFromChange} />
+                    <DatePicker className="gd-input-field" selected={from} onChange={this.onFromChange} locale = "ja-JP"/>
                 </label>
                 <label className="s-date-picker-to">
                     <h4>To</h4>
-                    <DatePicker className="gd-input-field" selected={to} onChange={this.onToChange} />
+                    <DatePicker className="gd-input-field" selected={to} onChange={this.onToChange} locale = "ja-JP"/>
                 </label>
                 <hr className="separator" />
                 <div style={{ height: 300 }} className="s-date-picker-chart">
@@ -137,6 +137,7 @@ export class DatePickerExample extends Component {
                             afm={afm}
                             onLoadingChanged={this.onLoadingChanged}
                             onError={this.onError}
+							locale = "ja-JP"
                         />)}
                 </div>
             </div>

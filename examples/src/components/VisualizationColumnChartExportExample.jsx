@@ -14,7 +14,15 @@ export class VisualizationColumnChartExportExample extends Component {
                     <div style={{ height: 300 }} className="s-visualization-chart">
                         <Visualization
                             projectId={projectId}
-                            identifier={columnVisualizationIdentifier}
+                            //identifier={columnVisualizationIdentifier}
+							uri="/gdc/md/ht3owbpk6h0yfjtkcsgva3osu3z7paol/obj/10165"
+						locale = "ja-JP"
+						config={{
+							menu: {
+								aggregations: true,
+								aggregationsSubMenu: true,
+							},
+						}}
                             onExportReady={onExportReady}
                         />
                     </div>
