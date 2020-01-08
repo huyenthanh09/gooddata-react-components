@@ -128,6 +128,9 @@
     "eslint": "./examples/**/*.{js,jsx}",
     "tslint": "./{__mocks__,src,stories}/**/*.{ts,tsx}"
   },
+   "engines": {
+    "node": "^8.10.0"
+  },
   "scripts": {
     "prepare?": "# Called before `npm publish` and on local `npm install`. Temporarily also for deleting obsolete node_modules. Ends with `true` to continue gracefully.",
     "prepare": "cd examples/server && yarn install --pure-lockfile && cd ../..; rm -r examples/node_modules 2>/dev/null; true",
