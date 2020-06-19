@@ -56,7 +56,7 @@ module.exports = async (env, argv) => {
             },
         },
         "/api": {
-            target: "http://10.0.69.56:8778",
+            target: "http://10.0.69.56:8787",
             secure: false,
             onProxyReq: req => {
                 console.log("proxy", "/gdc", req.path); // eslint-disable-line no-console
@@ -65,7 +65,7 @@ module.exports = async (env, argv) => {
                     req.setHeader("content-length", "0");
                 }
                 // eslint-disable-next-line no-console
-                console.log(`Proxy ${req.path} to http://10.0.69.56:8778 (use: yarn examples-server)`);
+                console.log(`Proxy ${req.path} to http://10.0.69.56:8787 (use: yarn examples-server)`);
             },
         },
     };

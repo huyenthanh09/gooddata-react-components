@@ -20,10 +20,22 @@ import PivotTableColumnsGrowToFitExample from "../components/PivotTableColumnsGr
 import PivotTableColumnsGrowToFitExampleSRC from "!raw-loader!../components/PivotTableColumnsGrowToFitExample"; // eslint-disable-line import/no-webpack-loader-syntax, import/no-unresolved, import/extensions, import/first
 import PivotTableManualResizingExample from "../components/PivotTableManualResizingExample";
 import PivotTableManualResizingExampleSRC from "!raw-loader!../components/PivotTableManualResizingExample"; // eslint-disable-line import/no-webpack-loader-syntax, import/no-unresolved, import/extensions, import/first
+import PivotTableManualResizingExample_h from "../components/PivotTableManualResizingExample_h";
+import PivotTableManualResizingExample_hSRC from "!raw-loader!../components/PivotTableManualResizingExample_h";
 
 export const PivotTableDemo = () => (
     <div>
         <h1>Pivot Table</h1>
+
+        <hr className="separator" />
+
+        <h2>Manual-resizing</h2>
+        <div id="manual">
+            <ExampleWithSource
+                for={() => <PivotTableManualResizingExample_h />}
+                source={PivotTableManualResizingExample_hSRC}
+            />
+        </div>
 
         <hr className="separator" />
 
