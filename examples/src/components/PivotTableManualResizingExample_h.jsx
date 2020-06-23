@@ -209,9 +209,9 @@ export class PivotTableManualResizingExample_h extends Component {
                         measures={measures}
                         config={{
                             columnSizing: {
-                                columnWidths: [m1W, m2W, m3W, m4W],
+                                columnWidths: [m1W, m2W, m3W, Model.allMeasureColumnWidthItem(100)],
                                 growToFit: true,
-                                defaultWidth: "unset",
+                                defaultWidth: "viewport",
                             },
                         }}
                         onColumnResized={this.onColumnResized}
@@ -389,7 +389,7 @@ export class PivotTableManualResizingExample_h extends Component {
                         columns={[Model.attribute(quarterDateIdentifier).localIdentifier("column")]}
                         config={{
                             columnSizing: {
-                                defaultWidth: "unset",
+                                defaultWidth: "viewport",
                                 growToFit: false,
                                 columnWidths: [
                                     {
@@ -453,8 +453,9 @@ export class PivotTableManualResizingExample_h extends Component {
                             },
                             columnSizing: {
                                 columnWidths: [stateW, nameW, menuW, q1JanM2, q1JanM3, q1DecM1, q1DecM4],
+                                //columnWidths: [Model.allMeasureColumnWidthItem(100)],
                                 growToFit: false,
-                                defaultWidth: "unset",
+                                defaultWidth: "viewport",
                             },
                         }}
                         pageSize={20}
@@ -522,8 +523,8 @@ export class PivotTableManualResizingExample_h extends Component {
                         rows={attribute_sppy}
                         config={{
                             columnSizing: {
-                                defaultWidth: "unset",
-                                growToFit: false,
+                                defaultWidth: "viewport",
+                                growToFit: true,
                                 columnWidths: [sppyw],
                             },
                         }}
@@ -552,6 +553,30 @@ export class PivotTableManualResizingExample_h extends Component {
                     <Visualization
                         projectId={projectId}
                         uri="/gdc/md/xp9yfghe4na21w27cyrnyrwx5si2vk6e/obj/11051"
+                        config={{
+                            columnSizing: {
+                                growToFit: true,
+                            },
+                        }}
+                    />
+                </div>
+                <p>--------</p>
+                <div style={{ height: 300 }} className="s-visualization-chart">
+                    <Visualization
+                        projectId={projectId}
+                        uri="/gdc/md/xp9yfghe4na21w27cyrnyrwx5si2vk6e/obj/11058"
+                        /*config={{
+                            columnSizing: {
+                                growToFit: true,
+                            },
+                        }}*/
+                    />
+                </div>
+                <p>--------</p>
+                <div style={{ height: 300 }} className="s-visualization-chart">
+                    <Visualization
+                        projectId={projectId}
+                        uri="/gdc/md/xp9yfghe4na21w27cyrnyrwx5si2vk6e/obj/11057"
                         config={{
                             columnSizing: {
                                 growToFit: true,

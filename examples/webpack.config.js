@@ -44,7 +44,7 @@ module.exports = async (env, argv) => {
     const proxy = {
         "/gdc": {
             changeOrigin: true,
-            cookieDomainRewrite: "localhost",
+            cookieDomainRewrite: "10.0.69.56",
             secure: false,
             target: backendUrl,
             headers: {

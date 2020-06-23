@@ -177,6 +177,10 @@ export class PivotTableSizingComplexExample extends Component {
                                 defaultWidth: this.state.autoResize ? "viewport" : "unset",
                                 growToFit: this.state.growToFit,
                             },
+                            menu: {
+                                aggregations: true,
+                                aggregationsSubMenu: true,
+                            },
                         }}
                         pageSize={20}
                         onColumnResized={this.onColumnResized}
