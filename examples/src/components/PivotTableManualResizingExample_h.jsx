@@ -192,7 +192,16 @@ export class PivotTableManualResizingExample_h extends Component {
                         columns={columns}
                         config={{
                             columnSizing: {
-                                columnWidths: [stateW, nameW, menuW, q1JanM2, q1JanM3, q1DecM1, q1DecM4],
+                                columnWidths: [
+                                    stateW,
+                                    nameW,
+                                    menuW,
+                                    q1JanM2,
+                                    q1JanM3,
+                                    q1DecM1,
+                                    q1DecM4,
+                                    Model.allMeasureColumnWidthItem(100),
+                                ],
                                 growToFit: false,
                                 defaultWidth: "viewport",
                             },
@@ -301,12 +310,12 @@ export class PivotTableManualResizingExample_h extends Component {
                         columns={attributes}
                         config={{
                             columnSizing: {
-                                defaultWidth: "unset",
+                                defaultWidth: "viewport",
                                 growToFit: false,
                                 columnWidths: [
                                     {
                                         measureColumnWidthItem: {
-                                            width: 60,
+                                            width: "auto",
                                             locators: [
                                                 {
                                                     attributeLocatorItem: {
@@ -339,7 +348,7 @@ export class PivotTableManualResizingExample_h extends Component {
                                     },
                                     {
                                         measureColumnWidthItem: {
-                                            width: 60,
+                                            width: "auto",
                                             locators: [
                                                 {
                                                     attributeLocatorItem: {
@@ -370,6 +379,7 @@ export class PivotTableManualResizingExample_h extends Component {
                                             ],
                                         },
                                     },
+                                    Model.allMeasureColumnWidthItem(100),
                                 ],
                             },
                         }}
@@ -390,7 +400,7 @@ export class PivotTableManualResizingExample_h extends Component {
                         config={{
                             columnSizing: {
                                 defaultWidth: "viewport",
-                                growToFit: false,
+                                growToFit: true,
                                 columnWidths: [
                                     {
                                         measureColumnWidthItem: {
@@ -436,6 +446,7 @@ export class PivotTableManualResizingExample_h extends Component {
                                             attributeIdentifier: "row",
                                         },
                                     },
+                                    Model.allMeasureColumnWidthItem(100),
                                 ],
                             },
                         }}
@@ -576,7 +587,7 @@ export class PivotTableManualResizingExample_h extends Component {
                 <div style={{ height: 300 }} className="s-visualization-chart">
                     <Visualization
                         projectId={projectId}
-                        uri="/gdc/md/xp9yfghe4na21w27cyrnyrwx5si2vk6e/obj/11057"
+                        uri="/gdc/md/xp9yfghe4na21w27cyrnyrwx5si2vk6e/obj/11088"
                         config={{
                             columnSizing: {
                                 growToFit: true,
