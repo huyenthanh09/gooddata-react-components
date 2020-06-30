@@ -134,7 +134,7 @@ export class PivotTableSizingComplexExample extends Component {
                     </button>
                     <button
                         className="gd-button gd-button-secondary gd-button gd-button-secondary s-change-width-button-measure-all"
-                        onClick={() => this.onButtonClick(allMeasureWidth(60))}
+                        onClick={() => this.onButtonClick(allMeasureWidth(50))}
                     >
                         Change all measures width
                     </button>
