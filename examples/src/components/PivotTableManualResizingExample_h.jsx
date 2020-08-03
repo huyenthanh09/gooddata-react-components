@@ -201,6 +201,7 @@ export class PivotTableManualResizingExample_h extends Component {
                                     q1DecM1,
                                     q1DecM4,
                                     Model.allMeasureColumnWidthItem(100),
+                                    Model.weakMeasureColumnWidthItemBuilder("m2", 80),
                                 ],
                                 growToFit: false,
                                 defaultWidth: "viewport",

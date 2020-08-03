@@ -153,14 +153,14 @@ export class PivotTableSizingWithMultipleMeasuresExample extends Component {
                     </button>
                     <button
                         className="gd-button gd-button-secondary gd-button gd-button-secondary s-change-width-button-measure-all"
-                        onClick={() => this.onButtonClick(allMeasureWidth(60))}
+                        onClick={() => this.onButtonClick(allMeasureWidth(100))}
                     >
                         Change all measures width
                     </button>
 
                     <button
                         className="gd-button gd-button-secondary gd-button gd-button-secondary s-change-width-button-given-measures"
-                        onClick={() => this.onButtonClick(weakMeasureWidth(60))}
+                        onClick={() => this.onButtonClick(weakMeasureWidth(80))}
                     >
                         Change Franchise Fees measure width
                     </button>
