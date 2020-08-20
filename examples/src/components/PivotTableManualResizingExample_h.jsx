@@ -255,7 +255,7 @@ export class PivotTableManualResizingExample_h extends Component {
                                 columnWidths: [
                                     {
                                         measureColumnWidthItem: {
-                                            width: 60,
+                                            width: { value: 60 },
                                             locators: [
                                                 {
                                                     attributeLocatorItem: {
@@ -316,7 +316,7 @@ export class PivotTableManualResizingExample_h extends Component {
                                 columnWidths: [
                                     {
                                         measureColumnWidthItem: {
-                                            width: "auto",
+                                            width: { value: "auto" },
                                             locators: [
                                                 {
                                                     attributeLocatorItem: {
@@ -349,7 +349,7 @@ export class PivotTableManualResizingExample_h extends Component {
                                     },
                                     {
                                         measureColumnWidthItem: {
-                                            width: "auto",
+                                            width: { value: "auto" },
                                             locators: [
                                                 {
                                                     attributeLocatorItem: {
@@ -394,10 +394,10 @@ export class PivotTableManualResizingExample_h extends Component {
                         measures={[
                             Model.measure(franchiseFeesIdentifier)
                                 .format("#,##0")
-                                .localIdentifier("m"),
+                                .localIdentifier("mm"),
                         ]}
-                        rows={[Model.attribute(locationNameDisplayFormIdentifier).localIdentifier("row")]}
-                        columns={[Model.attribute(quarterDateIdentifier).localIdentifier("column")]}
+                        rows={[Model.attribute(locationNameDisplayFormIdentifier).localIdentifier("rowm")]}
+                        columns={[Model.attribute(quarterDateIdentifier).localIdentifier("columnm")]}
                         config={{
                             columnSizing: {
                                 defaultWidth: "viewport",
@@ -405,18 +405,18 @@ export class PivotTableManualResizingExample_h extends Component {
                                 columnWidths: [
                                     {
                                         measureColumnWidthItem: {
-                                            width: 60,
+                                            width: { value: 60 },
                                             locators: [
                                                 {
                                                     attributeLocatorItem: {
-                                                        attributeIdentifier: "column",
+                                                        attributeIdentifier: "columnm",
                                                         element:
                                                             "/gdc/md/xp9yfghe4na21w27cyrnyrwx5si2vk6e/obj/2009/elements?id=1",
                                                     },
                                                 },
                                                 {
                                                     measureLocatorItem: {
-                                                        measureIdentifier: "m",
+                                                        measureIdentifier: "mm",
                                                     },
                                                 },
                                             ],
@@ -424,18 +424,18 @@ export class PivotTableManualResizingExample_h extends Component {
                                     },
                                     {
                                         measureColumnWidthItem: {
-                                            width: 60,
+                                            width: { value: 60 },
                                             locators: [
                                                 {
                                                     attributeLocatorItem: {
-                                                        attributeIdentifier: "column",
+                                                        attributeIdentifier: "columnm",
                                                         element:
                                                             "/gdc/md/xp9yfghe4na21w27cyrnyrwx5si2vk6e/obj/2009/elements?id=2",
                                                     },
                                                 },
                                                 {
                                                     measureLocatorItem: {
-                                                        measureIdentifier: "m",
+                                                        measureIdentifier: "mm",
                                                     },
                                                 },
                                             ],
@@ -443,8 +443,8 @@ export class PivotTableManualResizingExample_h extends Component {
                                     },
                                     {
                                         attributeColumnWidthItem: {
-                                            width: 60,
-                                            attributeIdentifier: "row",
+                                            width: { value: 60 },
+                                            attributeIdentifier: "rowm",
                                         },
                                     },
                                     Model.allMeasureColumnWidthItem(100),
@@ -499,7 +499,7 @@ export class PivotTableManualResizingExample_h extends Component {
                                 columnWidths: [
                                     {
                                         measureColumnWidthItem: {
-                                            width: 60,
+                                            width: { value: 60 },
                                             locators: [
                                                 {
                                                     measureLocatorItem: {
@@ -511,7 +511,7 @@ export class PivotTableManualResizingExample_h extends Component {
                                     },
                                     {
                                         measureColumnWidthItem: {
-                                            width: 60,
+                                            width: { value: 60 },
                                             locators: [
                                                 {
                                                     measureLocatorItem: {
@@ -537,7 +537,7 @@ export class PivotTableManualResizingExample_h extends Component {
                             columnSizing: {
                                 defaultWidth: "viewport",
                                 growToFit: true,
-                                columnWidths: [sppyw],
+                                columnWidths: [sppyw, Model.allMeasureColumnWidthItem(100)],
                             },
                         }}
                         onColumnResized={this.onColumnResized}
@@ -588,10 +588,10 @@ export class PivotTableManualResizingExample_h extends Component {
                 <div style={{ height: 300 }} className="s-visualization-chart">
                     <Visualization
                         projectId={projectId}
-                        uri="/gdc/md/xp9yfghe4na21w27cyrnyrwx5si2vk6e/obj/11088"
+                        uri="/gdc/md/xp9yfghe4na21w27cyrnyrwx5si2vk6e/obj/11050"
                         config={{
                             columnSizing: {
-                                growToFit: true,
+                                growToFit: false,
                             },
                         }}
                     />
