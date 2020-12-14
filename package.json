@@ -128,7 +128,7 @@
     "eslint": "./examples/**/*.{js,jsx}",
     "tslint": "./{__mocks__,src,stories}/**/*.{ts,tsx}"
   },
-   "engines": {
+  "engines": {
     "node": "^8.10.0"
   },
   "scripts": {

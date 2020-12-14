@@ -13,10 +13,6 @@ import {
     locationCityDisplayFormIdentifier,
     locationIdAttributeIdentifier,
     locationNameDisplayFormIdentifier,
-	locationResort,
-	locationResortIdentifier,
-	locationOwnerIdentifier,
-	locationOwnerDisplayFormIdentifier,
     totalSalesIdentifier
 } from '../utils/fixtures';
 
@@ -56,13 +52,13 @@ export class ParentFilterExample extends Component {
         if (stateFilterValues.length) {
             visFilters.push(
                 Model.positiveAttributeFilter(
-                    locationOwnerDisplayFormIdentifier,
+                    locationStateDisplayFormIdentifier,
                     stateFilterValues.map(filter => filter.value)));
         }
         if (cityFilterValues.length) {
             visFilters.push(
                 Model.positiveAttributeFilter(
-                    locationResortIdentifier,
+                    locationCityDisplayFormIdentifier,
                     cityFilterValues.map(filter => filter.value)));
         }
 
@@ -101,8 +97,8 @@ export class ParentFilterExample extends Component {
             >
                 {({ validElements, isLoading, error }) => {
                     if (error) {
-                        return <div>{error}</div>;
-						//return <ErrorComponent message="There was an error getting your execution" />;
+                        //return <div>{error}</div>;
+						return <ErrorComponent message="There was an error getting your execution" />;
                     }
                     const selectOptions = validElements ? validElements.items.map(item => ({
                         label: item.element.title,
@@ -138,9 +134,9 @@ export class ParentFilterExample extends Component {
         // State (parent) filter
         const stateFilter = this.renderFilter(
             'state',
-            locationOwnerDisplayFormIdentifier,
+            locationStateDisplayFormIdentifier,
             stateFilterValues,
-            'all ownerShips',
+            'all states',
             { limit: 20 },
             this.onStateChange
         );
@@ -154,7 +150,7 @@ export class ParentFilterExample extends Component {
                 attributes: [
                     {
                         displayForm: {
-                            identifier: locationResortIdentifier
+                            identifier: locationCityDisplayFormIdentifier
                         },
                         localIdentifier: 'childAttribute'
                     }
@@ -164,14 +160,14 @@ export class ParentFilterExample extends Component {
                         expression: {
                             value:
                                 // parent attribute identifier surrounded by '{}'
-                                `({${locationOwnerIdentifier}}` +
+                                `({${locationStateAttributeIdentifier}}` +
                                 // selected parent values surrounded by '[]' and separated by ','
                                 ` IN (${selectedParentItems}))` +
                                 // attribute identifier of common attribute between parent
                                 // and child attributes surrounded by '{}'
                                 ` OVER {${locationIdAttributeIdentifier}}` +
                                 // child attribute identifier surrounded by '{}'
-                                ` TO {${locationResort}}`
+                                ` TO {${locationCityAttributeIdentifier}}`
                         }
                     }
                 ]
@@ -180,9 +176,9 @@ export class ParentFilterExample extends Component {
         }
         const cityFilter = this.renderFilter(
             'city',
-            locationResortIdentifier,
+            locationCityDisplayFormIdentifier,
             cityFilterValues,
-            'all resorts',
+            'all cities',
             cityOptions,
             this.onCityChange
         );

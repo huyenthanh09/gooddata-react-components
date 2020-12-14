@@ -28,6 +28,7 @@ export class VisualizationColumnChartByIdentifierExample extends Component {
 								aggregations: true,
 								aggregationsSubMenu: true,
 							},
+							//maxHeight: 200
 						}}
 						
 					/>

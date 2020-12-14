@@ -2,7 +2,7 @@
 
 const demoProject = {
     'https://secure.gooddata.com': 'k26dtejorcqlqf11crn6imbeevp2q4kg',
-    'https://staging3.intgdc.com': 'ht3owbpk6h0yfjtkcsgva3osu3z7paol',
+    'https://staging3.intgdc.com': 'xp9yfghe4na21w27cyrnyrwx5si2vk6e',
     'https://staging2.intgdc.com': 'exveshu0intwbr4nk6ao8ft6vesjiqus',
     'https://staging.intgdc.com': 'xskxypodp5s4p2t6x99b2szivf8qi3st',
     'https://developer.na.gooddata.com': 'xms7ga4tf3g3nzucd8380o2bev8oeknp'
@@ -62,7 +62,11 @@ export const locationCityDisplayFormIdentifier = 'label.restaurantlocation.locat
 export const locationIdAttributeIdentifier = 'attr.restaurantlocation.locationid';
 export const locationNameAttributeUri = `/gdc/md/${demoProjectId}/obj/2204`;
 export const locationNameDisplayFormIdentifier = 'label.restaurantlocation.locationname';
+export const locationNameIdentifier = 'attr.restaurantlocation.locationname';
+export const locationOwnerIdentifier = 'attr.restaurantlocation.locationownership';
+export const locationOwnerDisplayFormIdentifier = 'label.restaurantlocation.locationownership';
 export const locationResortIdentifier = 'label.restaurantlocation.locationresort';
+export const locationResort = 'attr.restaurantlocation.locationresort';
 export const locationStateAttributeIdentifier = 'attr.restaurantlocation.locationstate';
 export const locationStateAttributeUri = `/gdc/md/${demoProjectId}/obj/2210`;
 export const locationStateAttributeCaliforniaUri = `/gdc/md/${demoProjectId}/obj/2210/elements?id=6340116`;
